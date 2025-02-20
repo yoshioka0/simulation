@@ -1,0 +1,200 @@
+/* Light Mode Styles */
+.light-mode {
+    background: linear-gradient(to right, #ffffff, #e6e6e6);
+    color: black;
+    background: linear-gradient(135deg, rgba(255, 148, 164, 0.8), rgba(249, 183, 182, 0.8), rgba(255, 235, 209, 0.8), rgba(200, 148, 255, 0.8), rgba(183, 200, 182, 0.8), rgba(209, 235, 255, 0.8), rgba(255, 148, 200, 0.8), rgba(200, 183, 249, 0.8));
+    background-size: 300% 300%; 
+    animation: gradientBackground 10s ease-in-out infinite alternate-reverse; 
+    
+}
+
+/* Animation for the background gradient */
+@keyframes gradientBackground {
+    0% { background-position: 0% 50%; }
+    20% { background-position: 30% 70%; }
+    40% { background-position: 80% 30%; }
+    60% { background-position: 50% 90%; }
+    80% { background-position: 20% 40%; }
+    100% { background-position: 0% 50%; }
+}
+
+.light-mode .data-view,
+.light-mode .chunk,
+.light-mode footer {
+    background: rgba(0, 0, 0, 0.2);
+    color: #fff;
+}
+
+.light-mode textarea {
+    background: none;
+    color: black;
+}
+
+.light-mode button {
+    background: #007BFF;
+}
+
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to right, #1c1c1c, #3a3a3a);
+    color: white;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+#theme-toggle {
+	margin: 0;
+    position: absolute;  
+    top: 10px;        
+    right: 10px;      
+    background: #D07000;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+#theme-toggle:hover {
+    background: #b85c00;
+}
+.container {
+    padding: 20px;
+    margin-top: 40px;
+}
+.header h1 {
+    font-size: 2.5em;
+    margin-bottom: 5px;
+}
+.main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.input-area {
+    margin: 20px;
+}
+textarea {
+    width: 400px;
+    height: 100px;
+    padding: 10px;
+    background: none;
+    color: white;
+}
+.data-view {
+    width: 70%;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    
+}
+.chunk {
+    background: rgba(255, 255, 255, 0.2);
+    margin: 5px;
+    padding: 10px;
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+}
+button {
+    margin-top: 10px;
+    padding: 10px;
+    background: #D07000;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+}
+.highlight {
+    font-weight: bold;
+    color: #ff9800; 
+}
+.highlight2 {
+    font-weight: bold;
+    color: #ABFF97; 
+}
+	/* Footer */
+footer {
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    text-align: center;
+    padding: 20px 10px;
+    font-size: 14px;
+    border-top: 1px solid #ddd;
+    position: relative;
+    bottom:0;
+    margin-top: 40px;
+}
+
+/* Footer links */
+footer a {
+    text-decoration: none;
+    color: #555;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #333;
+}
+
+/* Additional */
+.footer-content p.made-with-love {
+    margin-top: 15px;
+    font-size: 16px;
+    color: #fff; 
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); 
+    opacity: 0; 
+    transform: translateY(20px); 
+    transition: opacity 1s ease, transform 1s ease; 
+}
+.custom-link {
+    color: #ff6f91; 
+}
+
+.custom-link:hover {
+    color: #ff3b5c; 
+}
+
+.footer-content p.made-with-love span {
+    color: #ff6f91; 
+}
+
+.footer-icon {
+    width: 20px;  
+    height: 20px;
+    vertical-align: middle;  
+    margin-left: 5px;  
+}
+
+/* Visible state triggered by Intersection Observer */
+.footer-content.p-visible p.made-with-love {
+    opacity: 1; 
+    transform: translateY(0); 
+}
+
+
+
+@media (max-width: 600px) {
+    body, footer, .footer-content p.made-with-love {
+        font-size: 12px;
+    }
+   footer{
+        padding: 10px 10px;
+    }
+    .header h1 {
+    font-size: 2em;
+    margin-bottom: 5px;
+    }
+	textarea {
+	    width: 300px;
+	}  
+    .data-view {
+        width: 95%;       
+    }
+}

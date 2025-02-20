@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Erasure Simulation</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+	<button id="theme-toggle">🌙 Dark Mode</button>
+    <div class="container">
+        <div class="header">
+            <h1>Erasure Simulation (XOR)(4,1)</h1>
+            <p>Simulating data protection techniques (upto 1 chunk)</p>
+        </div>
+        <div class="main-content">
+            <div class="input-area">
+                <textarea id="dataInput" placeholder="Enter your text data here..."></textarea><br>
+                <button onclick="storeData()">Store Data</button>
+            </div>
+            <div class="data-view">
+                <h3>Stored Chunks</h3>
+                <span id="cs"></span><span id="ps"></span>
+                <div id="chunkContainer"></div>
+                <button class="recover-btn" onclick="recoverData()">Recover Missing Chunks</button>
+            </div>
+        </div>
+    </div>
+    
+<footer>
+      <div class="footer-content">
+        <p>&copy; 2025 Erasure Simulation. All rights reserved.</p>
+        <p class="made-with-love">Made with<img src="/nihongo/img/heart.png" alt="Heart Icon" class="footer-icon"> by<a href="https://yoshioka0.github.io/" class="custom-link">Yoshioka</a></p>
+      </div>
+</footer>
+    
+    
+
+
+</body>
+</html>
